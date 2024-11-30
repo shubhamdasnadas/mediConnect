@@ -46,7 +46,7 @@ const Register = () => {
     >
       <div
         style={{
-          width: 400,
+          width: 350,
           background: '#fff',
           padding: '20px',
           borderRadius: '8px',
