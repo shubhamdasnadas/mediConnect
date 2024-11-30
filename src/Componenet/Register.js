@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Form, Input, Divider } from 'antd';
+import { Button, Form, Input, Divider, } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons';
 
-export const Login = (props) => {
-  const [rule, setRule] = useState(false);
+const Register = () => {
+    const [rule, setRule] = useState(false);
   const [message, setMessage] = useState("");
   const [formData, setFormData] = useState({
     mobile: "",
@@ -52,6 +52,10 @@ export const Login = (props) => {
           borderRadius: '8px',
         }}
       >
+        <div className='d-flex flex-column' style={{lineHeight: '1.5'}}>
+        <h2 className="text-left mb-4">Register</h2>  
+        <span className='text-left'>Already have an account? <a href="/login" style={{textDecoration: 'none'}}>Sign In</a></span>
+        </div><br/>
         <Form layout="vertical" name="login-form" style={{ lineHeight: '1.5' }}>
           <Form.Item name="mobile" label="Mobile No">
             <Input
@@ -77,25 +81,37 @@ export const Login = (props) => {
           <Form.Item
             name="password"
             label="Password"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your password',
-              },
-            ]}
+            // rules={[
+            //   {
+            //     required: true,
+            //     message: 'Please input your password',
+            //   },
+            // ]}
+          >
+            <Input.Password prefix={<LockOutlined className="text-primary" />} onChange={(e) => setFormData({...formData, password: e.target.value})} />
+          </Form.Item>
+          <Form.Item
+            name="confirm-password"
+            label="Confirm Password"
+            // rules={[
+            //   {
+            //     required: true,
+            //     message: 'Please input your password',
+            //   },
+            // ]}
           >
             <Input.Password prefix={<LockOutlined className="text-primary" />} onChange={(e) => setFormData({...formData, password: e.target.value})} />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" block>
-              Sign In
+              Sign Up
             </Button>
           </Form.Item>
         </Form>
-        {renderOtherSignIn}
+        
       </div>
     </div>
   );
-};
+}
 
-export default Login;
+export default Register
