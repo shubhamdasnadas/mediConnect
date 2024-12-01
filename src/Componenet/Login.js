@@ -22,7 +22,7 @@ export const Login = (props) => {
   };
   const handleLogin = () => {
     console.log(formData);
-    if (formData.mobile === "" && formData.password === "") {
+    if (formData.mobile === "" || formData.password === "") {
       navigate("/")
     }
     else {
