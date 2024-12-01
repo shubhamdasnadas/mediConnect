@@ -54,7 +54,7 @@ const Register = () => {
       >
         <div className='d-flex flex-column' style={{lineHeight: '1.5'}}>
         <h2 className="text-left mb-4">Register</h2>  
-        <span className='text-left'>Already have an account? <a href="/login" style={{textDecoration: 'none'}}>Sign In</a></span>
+        <span className='text-left'>Already have an account? <a href="/" style={{textDecoration: 'none'}}>Sign In</a></span>
         </div><br/>
         <Form layout="vertical" name="login-form" style={{ lineHeight: '1.5' }}>
           <Form.Item name="mobile" label="Mobile No">

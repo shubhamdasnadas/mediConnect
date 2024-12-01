@@ -4,12 +4,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './App.css';
 import Login from './Componenet/Login';
 import Register from './Componenet/Register';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      {/* <Login /> */}
-      <Register/>
+        <Outlet />
     </div>
   );
 }
