@@ -1,8 +1,12 @@
 import React from 'react'
+import VideoChat from './VideChat'
+import CreateRoom from './CreateRoom'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <CreateRoom />
+    </div>
   )
 }
 
